@@ -1,21 +1,19 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
-// https://astro.build/config
 export default defineConfig({
 	site: 'https://refwork.github.io',
 	base: '/',
 	integrations: [
 		starlight({
-			title: 'Ref. Work',
+			title: '文獻',
 			social: {
-				github: 'https://github.com/withastro/starlight',
+				github: 'https://github.com/refwork',
 			},
 			sidebar: [
 				{
 					label: 'Guides',
 					items: [
-						// Each item here is one entry in the navigation menu.
 						{ label: 'Example Guide', link: '/guides/example/' },
 					],
 				},
