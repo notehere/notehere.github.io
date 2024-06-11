@@ -1,5 +1,5 @@
 {
-  "name": "考古×筆記",
+  "name": "pre-qin_bldgs",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -10,11 +10,14 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/mdx": "^3.1.0",
-    "@astrojs/rss": "^4.0.6",
-    "@astrojs/sitemap": "^3.1.5",
-    "astro": "^4.10.1",
     "@astrojs/check": "^0.7.0",
-    "typescript": "^5.4.5"
+    "@astrojs/partytown": "^2.1.0",
+    "@astrojs/starlight": "^0.24.0",
+    "@astrojs/starlight-tailwind": "^2.0.3",
+    "@astrojs/tailwind": "^5.1.0",
+    "astro": "^4.10.0",
+    "sharp": "^0.32.5",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5.4.3"
   }
 }
