@@ -79,6 +79,13 @@ export default defineConfig({
 								{ label: '安裝步驟', link: '/note/arcgispro/installation-guide' },
 							],
 						},
+						{
+							label: 'EndNote',
+							collapsed: true,
+							items: [
+								{ label: '批量修改', link: '/note/endnote/batch-edit' },
+							],
+						},
 					],
 				},
 			],
