@@ -76,14 +76,16 @@ export default defineConfig({
 							label: 'ArcGIS Pro',
 							collapsed: true,
 							items: [
-								{ label: '安裝步驟', link: '/note/arcgispro/installation-guide' },
+								{ label: '安裝軟件', link: '/note/arcgispro/installation' },
+								{ label: '創建地圖項目', link: '/note/arcgispro/create-project' },
+								{ label: '配準歷史衛星圖像', link: '/note/arcgispro/georeferencing-satellite-imagery' },
 							],
 						},
 						{
 							label: 'EndNote',
 							collapsed: true,
 							items: [
-								{ label: '批量修改', link: '/note/endnote/batch-edit' },
+								{ label: '批量修改文獻', link: '/note/endnote/batch-edit' },
 							],
 						},
 					],
