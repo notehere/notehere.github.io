@@ -53,6 +53,13 @@ export default defineConfig({
 					collapsed: true,
 					items: [
 						{
+							label: '圖錄',
+							collapsed: true,
+							items: [
+								{ label: '甲骨文', link: '/index/catalogue/oracle-bone' },
+							],
+						},
+						{
 							label: '期刊',
 							collapsed: true,
 							items: [
