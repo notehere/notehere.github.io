@@ -13,7 +13,7 @@ export default defineConfig({
 			},
 		}),
 		starlight({
-		title: '考古×筆記',
+		title: '右吉角落',
 		description: '哈囉！考古學',
 		head: [
 			{
@@ -76,7 +76,7 @@ export default defineConfig({
 					],
 				},
 				{
-					label: '備忘',
+					label: '指南',
 					collapsed: true,
 					items: [
 						{
@@ -92,7 +92,8 @@ export default defineConfig({
 							label: 'EndNote',
 							collapsed: true,
 							items: [
-								{ label: '批量修改文獻', link: '/note/endnote/batch-edit' },
+								{ label: '導入文獻', link: '/note/endnote/import-reference' },
+								{ label: '批量編輯', link: '/note/endnote/batch-edit' },
 							],
 						},
 					],
