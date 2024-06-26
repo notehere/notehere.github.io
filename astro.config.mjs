@@ -4,7 +4,7 @@ import tailwind from '@astrojs/tailwind';
 import partytown from "@astrojs/partytown";
 
 export default defineConfig({
-	site: 'https://arcnote.github.io',
+	site: 'https://notehere.github.io',
 	base: '/',
 	integrations: [
 		partytown({
