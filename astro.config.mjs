@@ -13,7 +13,7 @@ export default defineConfig({
 			},
 		}),
 		starlight({
-		title: '右吉角落',
+		title: '右吉',
 		description: '哈囉！考古學',
 		head: [
 			{
