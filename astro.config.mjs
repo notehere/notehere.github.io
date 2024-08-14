@@ -83,17 +83,24 @@ export default defineConfig({
 							label: 'ArcGIS Pro',
 							collapsed: true,
 							items: [
-								{ label: '簡介', link: '/note/arcgispro/brief-introduction' },
-								{ label: '安裝軟件', link: '/note/arcgispro/installation' },
+								{ label: '簡介', link: '/note/arcgispro/introduction' },
 								{ label: '創建地圖項目', link: '/note/arcgispro/create-project' },
 								{ label: '配準歷史衛星圖像', link: '/note/arcgispro/georeferencing-satellite-imagery' },
 							],
 						},
 						{
+							label: 'QGIS',
+							collapsed: true,
+							items: [
+								{ label: '簡介', link: '/note/qgis/introduction' },
+								{ label: '添加底圖', link: '/note/qgis/add-basemap' },
+							],
+						},						
+						{
 							label: 'EndNote',
 							collapsed: true,
 							items: [
-								{ label: '簡介', link: '/note/endnote/brief-introduction' },
+								{ label: '簡介', link: '/note/endnote/introduction' },
 								{ label: '導入文獻', link: '/note/endnote/import-reference' },
 								{ label: '批量編輯', link: '/note/endnote/batch-edit' },
 							],
