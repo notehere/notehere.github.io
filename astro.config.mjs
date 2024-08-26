@@ -53,10 +53,10 @@ export default defineConfig({
 					collapsed: true,
 					items: [
 						{
-							label: '圖錄',
+							label: '甲骨學',
 							collapsed: true,
 							items: [
-								{ label: '甲骨文', link: '/index/catalogue/oracle-bone' },
+								{ label: '圖錄 ', link: '/index/oracle-bone/catalogue' },
 							],
 						},
 						{
