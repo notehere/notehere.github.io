@@ -1,0 +1,55 @@
+---
+title: 批量修改
+date: 2024-08-27
+description: 哈囉！考古學
+---
+
+## 項目類型（ItemType）
+```js
+const zoteroPane = Zotero.getActiveZoteroPane();
+const selected = zoteroPane.getSelectedItems();
+for (const item of selected) {
+  item.setType(Zotero.ItemTypes.getID('此處修改項目類型'));
+  await item.saveTx();
+}
+```
+
+可用類型（輸入英文）
+- artwork 藝術作品
+- Audio Recording 錄音
+- Bill 法案
+- Blog Post 部落格貼文
+- book 書籍
+- Book Section 書的章節
+- Case
+- Conference Paper
+- Dictionary Entry
+- Document 文件
+- Email 電子郵件
+- Encyclopedia Article 百科全書文章
+- Film
+- Forum Post
+- Hearing
+- Instant Message 即時信息
+- Interview 訪談
+- Journal Article 期刊文章
+- Letter 信件
+- Magazine Article 雜誌文章
+- Manuscript 手稿
+- Map 地圖
+- Newspaper Article 報刊文章
+- Patent 專利
+- Podcast
+- Presentation
+- Radio Broadcast 電台廣播
+- Report 報告
+- Software 軟件
+- Statute
+- thesis 碩博士論文
+- TV Broadcast 電視廣播
+- Video Recording 錄影
+- webpage 網頁
+- attachment
+- note
+
+## 項目類型（ItemType）

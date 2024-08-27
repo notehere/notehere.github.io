@@ -80,6 +80,14 @@ export default defineConfig({
 					collapsed: true,
 					items: [
 						{
+							label: 'Zotero',
+							collapsed: true,
+							items: [
+								{ label: '簡介', link: '/note/zotero/introduction' },
+								{ label: '批量修改', link: '/note/zotero/batch-edit' },
+							],
+						},
+						{
 							label: 'ArcGIS Pro',
 							collapsed: true,
 							items: [
