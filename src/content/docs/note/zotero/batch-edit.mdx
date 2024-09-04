@@ -4,7 +4,7 @@ date: 2024-08-27
 description: 哈囉！考古學
 ---
 
-## 項目類型（ItemType）
+## 項目類型（Item Type）
 ```js
 const zoteroPane = Zotero.getActiveZoteroPane();
 const selected = zoteroPane.getSelectedItems();
@@ -14,42 +14,65 @@ for (const item of selected) {
 }
 ```
 
-可用類型（輸入英文）
+可用項目類型（複製英文）
 - artwork 藝術作品
-- Audio Recording 錄音
-- Bill 法案
-- Blog Post 部落格貼文
+- audioRecording 錄音
+- bill 法案
+- blogPost 部落格貼文
 - book 書籍
-- Book Section 書的章節
-- Case
-- Conference Paper
-- Dictionary Entry
-- Document 文件
-- Email 電子郵件
-- Encyclopedia Article 百科全書文章
-- Film
-- Forum Post
-- Hearing
-- Instant Message 即時信息
-- Interview 訪談
-- Journal Article 期刊文章
-- Letter 信件
-- Magazine Article 雜誌文章
-- Manuscript 手稿
-- Map 地圖
-- Newspaper Article 報刊文章
-- Patent 專利
-- Podcast
-- Presentation
-- Radio Broadcast 電台廣播
-- Report 報告
-- Software 軟件
-- Statute
+- bookSection 書的章節
+- case 案例
+- conferencePaper 會議論文
+- dictionaryEntry 字典條目
+- document 文件
+- email 電子郵件
+- encyclopediaArticle 百科全書文章
+- film
+- forumPost 論壇貼文
+- hearing 聽證會
+- instantMessage 即時信息
+- interview 訪談
+- journalArticle 期刊文章
+- letter 信件
+- magazineArticle 雜誌文章
+- manuscript 手稿
+- map 地圖
+- newspaperArticle 報刊文章
+- patent 專利
+- podcast 播客
+- presentation 簡報
+- radioBroadcast 電台廣播
+- report 報告
+- software 軟體
+- statute 法規
 - thesis 碩博士論文
-- TV Broadcast 電視廣播
-- Video Recording 錄影
+- tvBroadcast 電視廣播
+- videoRecording 錄影
 - webpage 網頁
 - attachment
 - note
 
-## 項目類型（ItemType）
+## 語言（Language）
+```js
+var fieldName = "language";
+var oldValue = "舊設定";
+var newValue = "新設定";
+ 
+var fieldID = Zotero.ItemFields.getID(fieldName);
+var s = new Zotero.Search();
+s.libraryID = ZoteroPane.getSelectedLibraryID();
+s.addCondition(fieldName, 'is', oldValue);
+var ids = await s.search();
+if (!ids.length) {
+    return "No items found";
+}
+await Zotero.DB.executeTransaction(async function () {
+    for (let id of ids) {
+        let item = await Zotero.Items.getAsync(id);
+        let mappedFieldID = Zotero.ItemFields.getFieldIDFromTypeAndBase(item.itemTypeID, fieldName);
+        item.setField(mappedFieldID ? mappedFieldID : fieldID, newValue);
+        await item.save();
+    }
+});
+return ids.length + " item(s) updated";
+```
