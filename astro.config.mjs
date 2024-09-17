@@ -76,7 +76,7 @@ export default defineConfig({
 					],
 				},
 				{
-					label: '指南',
+					label: '筆記',
 					collapsed: true,
 					items: [
 						{
