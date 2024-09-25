@@ -14,6 +14,15 @@ export default defineConfig({
 		}),
 		starlight({
 		title: '左吉右吉',
+		logo: {
+			src: './src/assets/logo.svg',
+			replacesTitle: true,
+		},
+		locales: {
+			root: {
+				label: '繁體中文',
+				lang: 'zh-TW'}
+			},
 		description: '哈囉！考古學',
 		head: [
 			{
@@ -42,14 +51,9 @@ export default defineConfig({
 				},
 			},
 		],
-		locales: {
-			root: {
-				label: '繁體中文',
-				lang: 'zh-TW'}
-			},
 			sidebar: [
 				{
-					label: '索引',
+					label: '主題',
 					collapsed: true,
 					items: [
 						{
@@ -71,46 +75,6 @@ export default defineConfig({
 							collapsed: true,
 							items: [
 								
-							],
-						},
-					],
-				},
-				{
-					label: '筆記',
-					collapsed: true,
-					items: [
-						{
-							label: 'Zotero',
-							collapsed: true,
-							items: [
-								{ label: '簡介', link: '/note/zotero/introduction' },
-								{ label: '批量修改', link: '/note/zotero/batch-edit' },
-							],
-						},
-						{
-							label: 'ArcGIS Pro',
-							collapsed: true,
-							items: [
-								{ label: '簡介', link: '/note/arcgispro/introduction' },
-								{ label: '創建地圖項目', link: '/note/arcgispro/create-project' },
-								{ label: '配準歷史衛星圖像', link: '/note/arcgispro/georeferencing-satellite-imagery' },
-							],
-						},
-						{
-							label: 'QGIS',
-							collapsed: true,
-							items: [
-								{ label: '簡介', link: '/note/qgis/introduction' },
-								{ label: '添加底圖', link: '/note/qgis/add-basemap' },
-							],
-						},						
-						{
-							label: 'EndNote',
-							collapsed: true,
-							items: [
-								{ label: '簡介', link: '/note/endnote/introduction' },
-								{ label: '導入文獻', link: '/note/endnote/import-reference' },
-								{ label: '批量編輯', link: '/note/endnote/batch-edit' },
 							],
 						},
 					],
